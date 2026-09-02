@@ -511,6 +511,85 @@ p {
   color: var(--green-dark);
 }
 
+/* ---------------- Google reviews badge ---------------- */
+
+.review-band {
+  padding: 40px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.review-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.review-badge .g-icon {
+  flex-shrink: 0;
+}
+
+.review-score-block {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.review-score {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--ink);
+  line-height: 1;
+}
+
+.review-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stars {
+  position: relative;
+  display: inline-block;
+  font-size: 1.1rem;
+  line-height: 1;
+  letter-spacing: 2px;
+  color: var(--border);
+}
+
+.stars::before {
+  content: "★★★★★";
+}
+
+.stars::after {
+  content: "★★★★★";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--rating, 100%);
+  overflow: hidden;
+  white-space: nowrap;
+  color: #f5a623;
+}
+
+.review-count {
+  font-size: 0.85rem;
+  color: var(--ink-faint);
+}
+
+.review-badge-cta {
+  border-color: var(--border);
+  color: var(--ink);
+}
+
+.review-badge:hover .review-badge-cta {
+  background: var(--green-tint);
+  border-color: var(--green);
+  transform: translateY(-2px);
+}
+
 /* ---------------- USP row ---------------- */
 
 .usp-grid {
