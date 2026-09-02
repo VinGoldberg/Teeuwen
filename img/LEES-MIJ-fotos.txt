@@ -1,0 +1,46 @@
+FOTO'S TOEVOEGEN AAN DE WEBSITE
+================================
+
+De website is klaar en gebruikt op dit moment nette placeholder-vakken
+(groen streeppatroon) op de plek waar straks echte foto's komen. Zodra je
+onderstaande bestanden in deze map (img/) plaatst, verschijnen ze
+automatisch op de site — er moet niets aangepast worden aan de code.
+
+Zet de bestanden hier neer met EXACT deze naam:
+
+1. hero-pand.jpg
+   -> Grote foto bovenaan de homepage.
+   -> Bijvoorbeeld de foto van de voorzijde van het pand (het moderne
+      zwarte gebouw met de groene "CARROSSERIE TEEUWEN"-belettering in
+      de glaspartij) die je doorstuurde.
+   -> Formaat: liefst breed/landschap, minstens 1920x1080 px.
+
+2. werkplaats.jpg
+   -> Foto van de werkplaats (bv. de "RICHT ZONE / PLAATWERK ZONE" foto
+      met de wagens in herstelling). Gebruikt op de homepage en de
+      "Over Ons"-pagina.
+   -> Formaat: liefst 4:3 (bv. 1600x1200 px).
+
+3. kantoor-dossier.jpg
+   -> Foto van de dossierbehandeling/kantoor (bv. de foto van de
+      medewerker achter de twee schermen). Gebruikt op de homepage,
+      "Over Ons" en "Verzekeringsmaatschappijen".
+   -> Formaat: liefst 4:3 (bv. 1600x1200 px).
+
+4. inkom-bord.jpg
+   -> Foto van de inkom/het bord met logo en openingsuren aan de
+      toegangspoort. Gebruikt op de "Partners"-pagina.
+   -> Formaat: liefst 4:3 (bv. 1600x1200 px).
+
+Optioneel (nog niet gebruikt op een pagina, maar goed als extra):
+   -> De avondfoto van het pand met de logo-verlichting in het raam
+      kan je bv. gebruiken als extra sfeerfoto op "Over Ons" of in de
+      footer-achtergrond — laat het weten en ik verwerk hem.
+
+LOGO
+====
+In assets/logo.svg staat een handgetekende reconstructie van het logo
+(groene lijn-auto + wordmark), zodat de site nu al volledig werkt. Heb je
+het originele logobestand (svg/png/eps)? Vervang dan gewoon
+assets/logo.svg door dat bestand (zelfde bestandsnaam = geen code-
+aanpassing nodig), of stuur het door en ik verwerk het.
