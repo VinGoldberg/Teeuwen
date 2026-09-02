@@ -39,8 +39,11 @@ Optioneel (nog niet gebruikt op een pagina, maar goed als extra):
 
 LOGO
 ====
-In assets/logo.svg staat een handgetekende reconstructie van het logo
-(groene lijn-auto + wordmark), zodat de site nu al volledig werkt. Heb je
-het originele logobestand (svg/png/eps)? Vervang dan gewoon
-assets/logo.svg door dat bestand (zelfde bestandsnaam = geen code-
-aanpassing nodig), of stuur het door en ik verwerk het.
+Het echte logo is verwerkt (uit het aangeleverde PDF-bestand):
+- assets/logo-icon.png -> het groene auto-icoon, gebruikt in de
+  lichte header/navigatie naast de tekst "Carrosserie Teeuwen".
+- assets/logo-full.png -> het volledige logo (auto + "CARROSSERIE
+  TEEUWEN"-opschrift in de originele glans-look), gebruikt in de
+  donkere footer, waar de originele glanzende look het best tot zijn
+  recht komt.
+Beide zijn al bijgesneden met een transparante achtergrond.
