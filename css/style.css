@@ -475,20 +475,22 @@ p {
   background: var(--white);
   box-shadow: var(--shadow);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--green-darker);
   border: 3px solid var(--green);
-  font-size: 0.78rem;
-  line-height: 1.15;
+  font-size: 0.7rem;
+  line-height: 1.2;
   padding: 6px;
 }
 
 .badge-seal b {
   display: block;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  line-height: 1.1;
 }
 
 .checklist {
