@@ -129,40 +129,6 @@ p {
 
 /* ---------------- Header ---------------- */
 
-.top-strip {
-  background: var(--ink);
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 0.82rem;
-}
-
-.top-strip .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.top-strip a {
-  color: var(--white);
-}
-
-.top-strip a:hover {
-  color: var(--green);
-}
-
-.top-strip .top-links {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-site-header, .site-header {
-  display: block;
-}
-
 .header {
   position: sticky;
   top: 0;
@@ -1006,10 +972,6 @@ textarea {
 }
 
 @media (max-width: 640px) {
-  .top-strip .top-links {
-    display: none;
-  }
-
   .hero {
     min-height: 86vh;
   }
