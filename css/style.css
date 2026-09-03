@@ -473,20 +473,6 @@ p {
   object-fit: cover;
 }
 
-.photo-note {
-  position: absolute;
-  left: 14px;
-  bottom: 14px;
-  background: rgba(0, 0, 0, 0.55);
-  color: #fff;
-  font-size: 0.7rem;
-  padding: 6px 12px;
-  border-radius: 999px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  backdrop-filter: blur(4px);
-}
-
 .badge-seal {
   position: absolute;
   bottom: -20px;
