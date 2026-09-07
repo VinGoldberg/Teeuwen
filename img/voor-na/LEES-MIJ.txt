@@ -1,0 +1,32 @@
+VOOR/NA-SCHUIFBALK TOEVOEGEN
+=============================
+
+Op de homepage staat nu een sectie "Van schade tot perfect hersteld" met
+een schuifbalk: bezoekers kunnen met de muis (of vinger op mobiel) heen
+en weer slepen tussen een foto van de schade en dezelfde wagen na
+herstelling.
+
+Zolang deze twee bestanden hier nog niet aanwezig zijn, toont de sectie
+gewoon een lege, donkere placeholder — er verschijnt geen kapotte foto.
+
+Zet de bestanden hier neer (map img/voor-na/) met EXACT deze naam:
+
+1. voorbeeld-1-voor.jpg
+   -> Foto van de wagen MET schade (voor herstelling).
+
+2. voorbeeld-1-na.jpg
+   -> Foto van DEZELFDE wagen, vanuit dezelfde hoek/afstand,
+      NA herstelling.
+
+Belangrijk voor een mooi resultaat:
+- Gebruik voor beide foto's exact hetzelfde standpunt/hoek/zoom
+  (bv. op een statief of steeds op dezelfde plek staan), zodat de
+  schuifbalk de wagen naadloos "verandert" zonder dat het beeld
+  verspringt.
+- Formaat: liefst 4:3, minstens 1200x900 px.
+- Gelijkaardige belichting (bv. beide binnen of beide buiten, geen
+  felle zon op de ene en bewolkt op de andere) geeft het beste effect.
+
+Wil je later meerdere voorbeelden tonen (bv. een tweede of derde
+voor/na-vergelijking)? Laat het weten — dan voeg ik extra schuifbalken
+toe onder elkaar of een klik-doorschakelaar tussen voorbeelden.
