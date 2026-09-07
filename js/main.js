@@ -20,6 +20,61 @@ document.addEventListener("DOMContentLoaded", function () {
     yearEl.textContent = new Date().getFullYear();
   }
 
+  var cookieNotice = document.querySelector("[data-cookie-notice]");
+  if (cookieNotice) {
+    var cookieKey = "teeuwen-cookie-notice-dismissed";
+    var alreadyDismissed = false;
+    try {
+      alreadyDismissed = window.localStorage.getItem(cookieKey) === "1";
+    } catch (e) {}
+
+    if (!alreadyDismissed) {
+      window.setTimeout(function () {
+        cookieNotice.classList.add("is-visible");
+      }, 600);
+    }
+
+    var acceptBtn = cookieNotice.querySelector("[data-cookie-accept]");
+    if (acceptBtn) {
+      acceptBtn.addEventListener("click", function () {
+        cookieNotice.classList.remove("is-visible");
+        try {
+          window.localStorage.setItem(cookieKey, "1");
+        } catch (e) {}
+      });
+    }
+  }
+
+  var mapPlaceholder = document.querySelector("[data-map-placeholder]");
+  if (mapPlaceholder) {
+    var mapFrame = mapPlaceholder.closest(".map-frame");
+    var loadMap = function () {
+      var iframe = document.createElement("iframe");
+      iframe.src = mapPlaceholder.getAttribute("data-map-src");
+      iframe.loading = "lazy";
+      iframe.referrerPolicy = "no-referrer-when-downgrade";
+      iframe.title = "Locatie Carrosserie Teeuwen";
+      mapFrame.replaceChild(iframe, mapPlaceholder);
+      try {
+        window.localStorage.setItem("teeuwen-map-consent", "1");
+      } catch (e) {}
+    };
+
+    var mapConsent = false;
+    try {
+      mapConsent = window.localStorage.getItem("teeuwen-map-consent") === "1";
+    } catch (e) {}
+
+    if (mapConsent) {
+      loadMap();
+    } else {
+      var mapBtn = mapPlaceholder.querySelector("[data-map-load]");
+      if (mapBtn) {
+        mapBtn.addEventListener("click", loadMap);
+      }
+    }
+  }
+
   document.querySelectorAll(".ba-slider").forEach(function (slider) {
     var range = slider.querySelector(".ba-range");
     if (!range) return;

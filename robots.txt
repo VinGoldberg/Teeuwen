@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vingoldberg.github.io/Teeuwen/sitemap.xml

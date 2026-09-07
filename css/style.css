@@ -993,6 +993,12 @@ textarea {
   color: var(--green);
 }
 
+.footer-bottom a {
+  color: rgba(255, 255, 255, 0.72);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .footer-bottom {
   display: flex;
   justify-content: space-between;
@@ -1239,4 +1245,120 @@ textarea {
   .ba-slider {
     aspect-ratio: 1/1;
   }
+}
+
+/* ==========================================================================
+   Juridische tekstpagina (privacybeleid)
+   ========================================================================== */
+
+.legal-text {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.legal-text h2 {
+  margin-top: 40px;
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+}
+
+.legal-text h2:first-child {
+  margin-top: 0;
+}
+
+.legal-text p {
+  margin-bottom: 14px;
+}
+
+.legal-text .checklist {
+  margin-bottom: 14px;
+}
+
+.legal-text a {
+  color: var(--green-darker);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ==========================================================================
+   Cookiemelding
+   ========================================================================== */
+
+.cookie-notice {
+  position: fixed;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  z-index: 60;
+  max-width: 620px;
+  margin: 0 auto;
+  background: var(--ink);
+  color: rgba(255, 255, 255, 0.85);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  transform: translateY(140%);
+  transition: transform 0.35s ease;
+}
+
+.cookie-notice.is-visible {
+  transform: translateY(0);
+}
+
+.cookie-notice p {
+  flex: 1 1 320px;
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.cookie-notice a {
+  color: var(--green);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.cookie-notice .btn {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 640px) {
+  .cookie-notice {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    padding: 16px 18px;
+  }
+}
+
+/* ==========================================================================
+   Klik-om-te-laden kaart (privacy: geen Google-inhoud vóór toestemming)
+   ========================================================================== */
+
+.map-frame {
+  position: relative;
+}
+
+.map-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: var(--surface);
+  text-align: center;
+  padding: 24px;
+}
+
+.map-placeholder p {
+  max-width: 380px;
+  color: var(--ink-faint);
+  font-size: 0.85rem;
+  margin: 0;
 }
