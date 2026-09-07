@@ -368,7 +368,7 @@ p {
   font-variant-numeric: tabular-nums;
 }
 
-.hero-stats .stat span {
+.hero-stats .stat > span {
   font-size: 0.82rem;
   color: rgba(255, 255, 255, 0.72);
 }
