@@ -1121,6 +1121,14 @@ textarea {
   display: none;
 }
 
+.ba-caption-placeholder {
+  display: none;
+}
+
+.ba-caption-placeholder.is-visible {
+  display: block;
+}
+
 .ba-img {
   position: absolute;
   inset: 0;

@@ -30,16 +30,21 @@ document.addEventListener("DOMContentLoaded", function () {
     range.addEventListener("input", updatePosition);
     updatePosition();
 
-    var markEmpty = function (img) {
-      img.style.display = "none";
-      slider.classList.add("ba-empty");
+    var caption = slider.parentElement.querySelector(".ba-caption-placeholder");
+
+    var useFallback = function (img) {
+      var fallback = img.getAttribute("data-fallback");
+      if (!fallback || img.dataset.fallbackUsed) return;
+      img.dataset.fallbackUsed = "1";
+      img.src = fallback;
+      if (caption) caption.classList.add("is-visible");
     };
-    slider.querySelectorAll("img").forEach(function (img) {
+    slider.querySelectorAll("img[data-fallback]").forEach(function (img) {
       if (img.complete && img.naturalWidth === 0) {
-        markEmpty(img);
+        useFallback(img);
       } else {
         img.addEventListener("error", function () {
-          markEmpty(img);
+          useFallback(img);
         });
       }
     });
