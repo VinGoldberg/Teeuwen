@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   var revealTargets = document.querySelectorAll(
-    ".usp, .service-card, .step, .contact-card, .split > div, .cta-band"
+    ".usp, .service-card, .step, .contact-card, .split > div, .cta-band, .faq-item"
   );
   if (revealTargets.length && window.IntersectionObserver) {
     revealTargets.forEach(function (el, index) {
