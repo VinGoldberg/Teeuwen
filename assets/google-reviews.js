@@ -6,8 +6,8 @@
 // (sterren, komma i.p.v. punt, ...). Verder hoeft er niets aangepast
 // te worden.
 
-const GOOGLE_REVIEW_SCORE = 4.7;   // het cijfer, met een PUNT (bv. 4.7 of 4.9)
-const GOOGLE_REVIEW_COUNT = 120;   // het aantal reviews (enkel het getal)
+const GOOGLE_REVIEW_SCORE = 4.8;   // het cijfer, met een PUNT (bv. 4.7 of 4.9)
+const GOOGLE_REVIEW_COUNT = 121;   // het aantal reviews (enkel het getal)
 
 // ====================================================================
 // Onderstaande code hoeft niet aangepast te worden.
