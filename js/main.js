@@ -49,6 +49,20 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     }
+
+    document.querySelectorAll("[data-reopen-cookie-notice]").forEach(function (link) {
+      link.addEventListener("click", function (event) {
+        event.preventDefault();
+        try {
+          window.localStorage.removeItem(cookieKey);
+        } catch (e) {}
+        cookieNotice.classList.add("is-visible");
+        if (acceptBtn) acceptBtn.focus();
+        if (typeof toggleBackToTop === "function") {
+          toggleBackToTop();
+        }
+      });
+    });
   }
 
   var mapPlaceholder = document.querySelector("[data-map-placeholder]");
@@ -189,6 +203,18 @@ document.addEventListener("DOMContentLoaded", function () {
     revealTargets.forEach(function (el) {
       revealObserver.observe(el);
     });
+
+    // Veiligheidsnet: een plotselinge sprong (bv. een link die direct naar
+    // de footer springt) kan een element overslaan zodat de observer nooit
+    // afgaat. Na een korte tijd tonen we alles wat nog verborgen is alsnog.
+    window.setTimeout(function () {
+      revealTargets.forEach(function (el) {
+        if (!el.classList.contains("is-visible")) {
+          el.classList.add("is-visible");
+          revealObserver.unobserve(el);
+        }
+      });
+    }, 2500);
   }
 
   var countTargets = document.querySelectorAll("[data-count-to]");
