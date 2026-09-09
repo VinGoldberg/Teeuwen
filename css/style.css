@@ -965,6 +965,7 @@ textarea {
 }
 
 .map-frame {
+  position: relative;
   border-radius: var(--radius);
   overflow: hidden;
   border: 1px solid var(--border);
@@ -1376,10 +1377,6 @@ textarea {
 /* ==========================================================================
    Klik-om-te-laden kaart (privacy: geen Google-inhoud vóór toestemming)
    ========================================================================== */
-
-.map-frame {
-  position: relative;
-}
 
 .map-placeholder {
   position: absolute;

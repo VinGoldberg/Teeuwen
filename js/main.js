@@ -264,26 +264,30 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  var header = document.querySelector(".header");
-  if (header) {
-    var updateHeaderState = function () {
-      header.classList.toggle("is-scrolled", window.scrollY > 40);
-    };
-    var headerTicking = false;
+  var onScrollThrottled = function (fn) {
+    var ticking = false;
     window.addEventListener(
       "scroll",
       function () {
-        if (!headerTicking) {
-          window.requestAnimationFrame(updateHeaderState);
-          headerTicking = true;
+        if (!ticking) {
+          window.requestAnimationFrame(fn);
+          ticking = true;
           window.setTimeout(function () {
-            headerTicking = false;
+            ticking = false;
           }, 100);
         }
       },
       { passive: true }
     );
-    updateHeaderState();
+    fn();
+  };
+
+  var header = document.querySelector(".header");
+  if (header) {
+    var updateHeaderState = function () {
+      header.classList.toggle("is-scrolled", window.scrollY > 40);
+    };
+    onScrollThrottled(updateHeaderState);
   }
 
   var backToTop = document.createElement("button");
@@ -301,21 +305,7 @@ document.addEventListener("DOMContentLoaded", function () {
       !!cookieNotice && cookieNotice.classList.contains("is-visible")
     );
   };
-  var backToTopTicking = false;
-  window.addEventListener(
-    "scroll",
-    function () {
-      if (!backToTopTicking) {
-        window.requestAnimationFrame(toggleBackToTop);
-        backToTopTicking = true;
-        window.setTimeout(function () {
-          backToTopTicking = false;
-        }, 100);
-      }
-    },
-    { passive: true }
-  );
-  toggleBackToTop();
+  onScrollThrottled(toggleBackToTop);
 
   backToTop.addEventListener("click", function () {
     window.scrollTo({ top: 0, behavior: prefersReducedMotion ? "auto" : "smooth" });
