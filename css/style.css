@@ -1590,3 +1590,21 @@ textarea {
   color: var(--ink-soft);
   font-size: 0.95rem;
 }
+
+/* ==========================================================================
+   Partnerlogo's (Eurogarant, Traxio)
+   ========================================================================== */
+
+.partner-logo {
+  height: 68px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.partner-logo img {
+  max-height: 100%;
+  max-width: 150px;
+  width: auto;
+  object-fit: contain;
+}
